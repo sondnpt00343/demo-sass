@@ -1,61 +1,94 @@
-$primary-color: #3479f8;
-$secondary-color: #6e757c;
-$success-color: #4fa450;
-$danger-color: #cc4648;
-$warning-color: #f6c43d;
-$info-color: #499fb6;
-
 *,
 ::before,
 ::after {
     box-sizing: border-box;
 }
 
-.group {
+body {
+    font-family: system-ui;
+}
+
+// VD 1
+// @mixin move($x, $y: null) {
+//     translate: $x $y;
+// }
+
+// @mixin flexCenter {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// @mixin size($width, $height: null) {
+//     width: $width;
+//     height: $height;
+// }
+
+// @mixin rounded($tl, $tr: $tl, $br: $tl, $bl: $tl) {
+//     border-radius: $tl $tr $br $bl;
+//     @include move(100px);
+// }
+
+// .center {
+//     @include flexCenter;
+//     @include size(200px, 300px);
+//     @include rounded(10px, $bl: 60px);
+
+//     background: orange;
+
+//     font: {
+//         size: 30px;
+//         weight: 600;
+//     }
+// }
+
+// .box {
+//     @include flexCenter;
+//     @include size(150px);
+
+//     margin-top: 30px;
+//     background: olivedrab;
+
+//     font: {
+//         size: 24px;
+//         weight: 600;
+//     }
+// }
+
+@mixin grid($column, $spacing) {
+    --column: #{$column};
+    --spacing: #{$spacing};
+
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    padding: 50px;
+    row-gap: var(--spacing);
+    margin-left: calc(-1 * var(--spacing));
+
+    > * {
+        width: calc(100% / var(--column) - var(--spacing));
+        margin-left: var(--spacing);
+    }
 }
 
-.btn-base {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
+.list {
+    @include grid(4, 30px);
 
-    color: #fff;
+    .item {
+        background: olivedrab;
 
-    font-size: 14px;
-    font-weight: 600;
+        font: {
+            size: 20px;
+            weight: 600;
+        }
+    }
 }
 
-.btn-primary {
-    @extend .btn-base;
-    background: $primary-color;
-}
+// .news-list {
+//     @include grid(2, 20px);
+//     margin-top: 30px;
 
-.btn-secondary {
-    @extend .btn-base;
-    background: $secondary-color;
-}
-
-.btn-success {
-    @extend .btn-base;
-    background: $success-color;
-}
-
-.btn-danger {
-    @extend .btn-base;
-    background: $danger-color;
-}
-
-.btn-warning {
-    @extend .btn-base;
-    color: #333;
-    background: $warning-color;
-}
-
-.btn-info {
-    @extend .btn-base;
-    background: $info-color;
-}
+//     .news-item {
+//         background: orangered;
+//         padding: 20px;
+//     }
+// }

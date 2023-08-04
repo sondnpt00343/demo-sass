@@ -7,14 +7,52 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
-        <!-- Extend, Placeholder selector -->
-        <div class="group">
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-success">Success</button>
-            <button class="btn btn-danger">Danger</button>
-            <button class="btn btn-warning">Warning</button>
-            <button class="btn btn-info">Info</button>
+        <!--
+            I. Mixins:
+                1. Không tham số ✅
+                2. Có tham số ✅
+                    - Tham số mặc định ✅
+                    - Dùng tham số trước đó làm mặc định ✅
+                    - Truyền đối số theo tên ✅
+                3. Mixin lồng mixin ✅
+
+            II. Bài toán: Tạo mixin "grid"
+                - Tạo grid layout có theo hàng và cột
+                - Có tham số "column" và "spacing"
+                - Kết hợp sử dụng biến CSS & biến Sass
+         -->
+        <!-- VD 1 -->
+        <!-- <div class="center">Center me!</div>
+        <div class="box">Center!</div> -->
+
+        <div class="list">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+            <div class="item">Item 7</div>
+            <div class="item">Item 8</div>
+            <div class="item">Item 9</div>
+            <div class="item">Item 10</div>
+            <div class="item">Item 11</div>
+            <div class="item">Item 12</div>
+            <div class="item">Item 13</div>
+            <div class="item">Item 14</div>
+            <div class="item">Item 15</div>
+            <div class="item">Item 16</div>
         </div>
+
+        <!-- <div class="news-list">
+            <div class="news-item">News item 1</div>
+            <div class="news-item">News item 2</div>
+            <div class="news-item">News item 3</div>
+            <div class="news-item">News item 4</div>
+            <div class="news-item">News item 5</div>
+            <div class="news-item">News item 6</div>
+            <div class="news-item">News item 7</div>
+            <div class="news-item">News item 8</div>
+        </div> -->
     </body>
 </html>
