@@ -1,0 +1,10 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: green;
+    font-size: 30px;
+}
