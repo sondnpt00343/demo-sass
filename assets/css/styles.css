@@ -1,12 +1,55 @@
+:root {
+  --text-color: #333;
+}
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
-h1 {
-  color: green;
-  font-size: 30px;
+.card {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+.card:hover {
+  background: #f1f1f1;
+}
+.card:hover .card__title {
+  color: blue;
+}
+.card:hover .card__title::before {
+  color: orange;
+}
+.card--bottom {
+  margin-top: 100px;
+}
+.card__thumb {
+  width: 100%;
+}
+.card__title {
+  font-size: 22px;
+  font-family: monospace;
+  color: red;
+}
+.card__title strong {
+  color: red;
+}
+.card__title--large {
+  font-size: 32px;
+}
+.card__title::before {
+  content: "1. ";
+}
+.card__desc {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+}
+.card__btn-link {
+  color: #666;
 }
 
 /*# sourceMappingURL=styles.css.map */
