@@ -1,9 +1,9 @@
-// Global
-$primary-color: red;
-
-:root {
-    --text-color: #333;
-}
+$primary-color: #3479f8;
+$secondary-color: #6e757c;
+$success-color: #4fa450;
+$danger-color: #cc4648;
+$warning-color: #f6c43d;
+$info-color: #499fb6;
 
 *,
 ::before,
@@ -11,122 +11,51 @@ $primary-color: red;
     box-sizing: border-box;
 }
 
-// VD 1
-// .card {
-//     width: 300px;
-//     padding: 20px;
-//     border: 2px solid #ccc;
-//     border-radius: 8px;
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+}
 
-//     .thumb {
-//         width: 100%;
-//     }
-
-//     .title {
-//         font-size: 22px;
-//     }
-
-//     strong {
-//         color: red;
-//     }
-
-//     .desc {
-//         font-size: 18px;
-//     }
-
-//     .btn-link {
-//         color: #666;
-//     }
-// }
-
-// VD 2
-// .card {
-//     width: 300px;
-//     padding: 20px;
-//     border: 2px solid #ccc;
-//     border-radius: 8px;
-
-//     &-thumb {
-//         width: 100%;
-//     }
-
-//     &-title {
-//         font-size: 22px;
-//     }
-
-//     strong {
-//         color: red;
-//     }
-
-//     &-desc {
-//         font-size: 18px;
-//     }
-
-//     &-btn-link {
-//         color: #666;
-//     }
-// }
-
-// VD 3
-.card {
-    $font-family: monospace;
-
-    width: 300px;
-    padding: 20px;
-    border: 2px solid #ccc;
+.btn-base {
+    padding: 12px 20px;
+    border: none;
     border-radius: 8px;
 
-    &:hover {
-        background: #f1f1f1;
-    }
+    color: #fff;
 
-    &:hover &__title {
-        color: blue;
-    }
+    font-size: 14px;
+    font-weight: 600;
+}
 
-    &:hover &__title::before {
-        color: orange;
-    }
+.btn-primary {
+    @extend .btn-base;
+    background: $primary-color;
+}
 
-    &--bottom {
-        margin-top: 100px;
-    }
+.btn-secondary {
+    @extend .btn-base;
+    background: $secondary-color;
+}
 
-    &__thumb {
-        width: 100%;
-    }
+.btn-success {
+    @extend .btn-base;
+    background: $success-color;
+}
 
-    &__title {
-        font-size: 22px;
-        font-family: $font-family;
-        color: $primary-color;
+.btn-danger {
+    @extend .btn-base;
+    background: $danger-color;
+}
 
-        strong {
-            color: $primary-color;
-        }
+.btn-warning {
+    @extend .btn-base;
+    color: #333;
+    background: $warning-color;
+}
 
-        &--large {
-            font-size: 32px;
-        }
-
-        &::before {
-            content: "1. ";
-        }
-
-        // &:hover {
-        //     color: green;
-        // }
-    }
-
-    &__desc {
-        font: {
-            size: 18px;
-            weight: 600;
-            style: italic;
-        }
-    }
-
-    &__btn-link {
-        color: #666;
-    }
+.btn-info {
+    @extend .btn-base;
+    background: $info-color;
 }

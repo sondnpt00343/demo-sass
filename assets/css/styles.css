@@ -1,55 +1,48 @@
-:root {
-  --text-color: #333;
-}
-
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
-.card {
-  width: 300px;
-  padding: 20px;
-  border: 2px solid #ccc;
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px;
+}
+
+.btn-base, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-secondary, .btn-primary {
+  padding: 12px 20px;
+  border: none;
   border-radius: 8px;
-}
-.card:hover {
-  background: #f1f1f1;
-}
-.card:hover .card__title {
-  color: blue;
-}
-.card:hover .card__title::before {
-  color: orange;
-}
-.card--bottom {
-  margin-top: 100px;
-}
-.card__thumb {
-  width: 100%;
-}
-.card__title {
-  font-size: 22px;
-  font-family: monospace;
-  color: red;
-}
-.card__title strong {
-  color: red;
-}
-.card__title--large {
-  font-size: 32px;
-}
-.card__title::before {
-  content: "1. ";
-}
-.card__desc {
-  font-size: 18px;
+  color: #fff;
+  font-size: 14px;
   font-weight: 600;
-  font-style: italic;
 }
-.card__btn-link {
-  color: #666;
+
+.btn-primary {
+  background: #3479f8;
+}
+
+.btn-secondary {
+  background: #6e757c;
+}
+
+.btn-success {
+  background: #4fa450;
+}
+
+.btn-danger {
+  background: #cc4648;
+}
+
+.btn-warning {
+  color: #333;
+  background: #f6c43d;
+}
+
+.btn-info {
+  background: #499fb6;
 }
 
 /*# sourceMappingURL=styles.css.map */
