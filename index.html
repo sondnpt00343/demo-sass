@@ -8,22 +8,32 @@
     </head>
     <body>
         <!--
-            I. Mixins:
-                1. Không tham số ✅
-                2. Có tham số ✅
-                    - Tham số mặc định ✅
-                    - Dùng tham số trước đó làm mặc định ✅
-                    - Truyền đối số theo tên ✅
-                3. Mixin lồng mixin ✅
+            I. Nội dung học:
+                1. Câu lệnh điều kiện if ✅
+                2. Sử dụng media queries trong Sass ✅
+                3. Mixin có content ✅
 
-            II. Bài toán: Tạo mixin "grid"
-                - Tạo grid layout có theo hàng và cột
-                - Có tham số "column" và "spacing"
-                - Kết hợp sử dụng biến CSS & biến Sass
+            II. Bài toán: ✅
+                Tạo mixin "screen" giúp làm responsive dễ hơn.
+                
+                VD:
+                
+                @include screen(desktop) {
+                    // Code ...
+                }
+
+                @include screen(tablet) {
+                    // Code ...
+                }
+
+                @include screen(mobile) {
+                    // Code ...
+                }
          -->
-        <!-- VD 1 -->
-        <!-- <div class="center">Center me!</div>
-        <div class="box">Center!</div> -->
+
+        <!-- <div class="container">
+            <div class="item"></div>
+        </div> -->
 
         <div class="list">
             <div class="item">Item 1</div>
@@ -43,16 +53,5 @@
             <div class="item">Item 15</div>
             <div class="item">Item 16</div>
         </div>
-
-        <!-- <div class="news-list">
-            <div class="news-item">News item 1</div>
-            <div class="news-item">News item 2</div>
-            <div class="news-item">News item 3</div>
-            <div class="news-item">News item 4</div>
-            <div class="news-item">News item 5</div>
-            <div class="news-item">News item 6</div>
-            <div class="news-item">News item 7</div>
-            <div class="news-item">News item 8</div>
-        </div> -->
     </body>
 </html>

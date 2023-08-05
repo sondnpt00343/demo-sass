@@ -8,53 +8,6 @@ body {
     font-family: system-ui;
 }
 
-// VD 1
-// @mixin move($x, $y: null) {
-//     translate: $x $y;
-// }
-
-// @mixin flexCenter {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// @mixin size($width, $height: null) {
-//     width: $width;
-//     height: $height;
-// }
-
-// @mixin rounded($tl, $tr: $tl, $br: $tl, $bl: $tl) {
-//     border-radius: $tl $tr $br $bl;
-//     @include move(100px);
-// }
-
-// .center {
-//     @include flexCenter;
-//     @include size(200px, 300px);
-//     @include rounded(10px, $bl: 60px);
-
-//     background: orange;
-
-//     font: {
-//         size: 30px;
-//         weight: 600;
-//     }
-// }
-
-// .box {
-//     @include flexCenter;
-//     @include size(150px);
-
-//     margin-top: 30px;
-//     background: olivedrab;
-
-//     font: {
-//         size: 24px;
-//         weight: 600;
-//     }
-// }
-
 @mixin grid($column, $spacing) {
     --column: #{$column};
     --spacing: #{$spacing};
@@ -70,8 +23,31 @@ body {
     }
 }
 
+@mixin screen($device) {
+    @if $device == tablet {
+        @media (max-width: 991.98px) {
+            @content;
+        }
+    }
+    @if $device == mobile {
+        @media (max-width: 575.98px) {
+            @content;
+        }
+    }
+}
+
 .list {
     @include grid(4, 30px);
+
+    @include screen(tablet) {
+        --column: 2;
+        --spacing: 20px;
+    }
+
+    @include screen(mobile) {
+        --column: 1;
+        --spacing: 10px;
+    }
 
     .item {
         background: olivedrab;
@@ -83,12 +59,41 @@ body {
     }
 }
 
-// .news-list {
-//     @include grid(2, 20px);
-//     margin-top: 30px;
+// @mixin position($pos) {
+//     @if $pos == top-left {
+//         top: 0;
+//         left: 0;
+//     }
+//     @if $pos == top-right {
+//         top: 0;
+//         right: 0;
+//     }
+//     @if $pos == bottom-left {
+//         bottom: 0;
+//         left: 0;
+//     }
+//     @if $pos == bottom-right {
+//         bottom: 0;
+//         right: 0;
+//     }
+//     @if $pos == center {
+//         top: 50%;
+//         left: 50%;
+//         translate: -50% -50%;
+//     }
+// }
 
-//     .news-item {
-//         background: orangered;
-//         padding: 20px;
+// .container {
+//     position: relative;
+//     height: 400px;
+//     background: #ccc;
+
+//     .item {
+//         @include position(center);
+//         // top-left, top-right, bottom-right, bottom-left, center
+//         position: absolute;
+//         width: 100px;
+//         height: 100px;
+//         background: olivedrab;
 //     }
 // }

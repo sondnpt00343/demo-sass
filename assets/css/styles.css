@@ -20,6 +20,18 @@ body {
   width: calc(100% / var(--column) - var(--spacing));
   margin-left: var(--spacing);
 }
+@media (max-width: 991.98px) {
+  .list {
+    --column: 2;
+    --spacing: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .list {
+    --column: 1;
+    --spacing: 10px;
+  }
+}
 .list .item {
   background: olivedrab;
   font-size: 20px;
