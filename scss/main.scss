@@ -1,11 +1,18 @@
 // Base
-@import "base/variables";
-@import "base/mixins";
+// @use "base/variables";
+// @use "base/mixins";
 
-@import "base/reset";
-@import "base/common";
+// @import "base/reset";
+// @import "base/common";
 
 // Components
 @import "components/header";
-@import "components/navigation";
-@import "components/sidebar";
+// @import "components/navigation";
+// @import "components/sidebar";
+
+// Namespace
+
+// h1 {
+//     color: variables.$primary-color;
+//     @include mixins.flexCenter;
+// }
