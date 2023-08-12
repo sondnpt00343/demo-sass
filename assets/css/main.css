@@ -1,28 +1,12 @@
-/* Reset */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+img.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-/* Base */
-a {
-  text-decoration: none;
-}
-
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
-}
-
-/* Buttons */
-.btn {
-  padding: 10px 20px;
-}
-.btn--primary {
-  background: orange;
+.box {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
