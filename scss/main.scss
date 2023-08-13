@@ -1,70 +1,15 @@
-// Numbers
-$font-size: 20px;
-$padding: 2rem;
-$order: 2;
-$z-index: 99;
+// 1. Equality (==, !=)
+// 2. Relation (>, <, >=, <=)
+// 3. Numeric (+, -, *, /, %)
+// 4. Logic (not, and, or)
+// 5. Interpolation
 
-// Strings
-$device: mobile;
-$font-code: "monospace";
-$my-name: "Nguyen Van A";
+$selector: ".container";
+$property: "display";
+$placement: "left";
 
-// Colors
-$color1: green;
-$color2: #ff0000;
-
-$primary: green;
-$secondary: rgba(
-    $color: $primary,
-    $alpha: 0.5,
-);
-
-@debug $secondary;
-
-// Lists
-$colors: red green blue orange;
-$break-points: 575px 768px 991px;
-$font-weights: 400 500 600;
-
-// $list: 1 "2" 3 a "b" c "orange";
-
-// Maps (key:value)
-$break-points: (
-    "mobile": 575px,
-    "tablet": 768px,
-    "desktop": 991px,
-);
-$font-weights: (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700,
-);
-
-// Boolean (true or false)
-// $success: true;
-// $error: false;
-
-@mixin avatar($w, $h, $circle: false) {
-    width: $w;
-    height: $h;
-
-    @if $circle == true {
-        border-radius: 50%;
-    }
-}
-
-img.avatar {
-    @include avatar(100px, 100px, $circle: true);
-}
-
-// Null
-// $color: null;
-@mixin flexCenter($horizontal: center, $vertical: center) {
-    display: flex;
-    align-items: $vertical;
-    justify-content: $horizontal;
-}
-
-.box {
-    @include flexCenter($horizontal: null);
+#{$selector} {
+    #{$property}: flex;
+    margin-#{$placement}: 100px;
+    width: 100px;
 }
