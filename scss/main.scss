@@ -1,15 +1,29 @@
-// 1. Equality (==, !=)
-// 2. Relation (>, <, >=, <=)
-// 3. Numeric (+, -, *, /, %)
-// 4. Logic (not, and, or)
-// 5. Interpolation
+// @if @else
+// $condition: 10 == 10;
 
-$selector: ".container";
-$property: "display";
-$placement: "left";
+// h1 {
+//     color: if($condition, green, red);
+// }
 
-#{$selector} {
-    #{$property}: flex;
-    margin-#{$placement}: 100px;
-    width: 100px;
+// @each
+// $break-points: (
+//     "sm": 575px,
+//     "md": 768px,
+//     "lg": 991px,
+//     "xl": 1140px,
+//     "xxl": 1320px,
+// );
+
+// @each $infix, $break-point in $break-points {
+//     @media (min-width: #{$break-point}) {
+//         .col-#{$infix} {
+//             width: 100px;
+//         }
+//     }
+// }
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        --column-number: #{$i};
+    }
 }
